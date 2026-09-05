@@ -1,10 +1,10 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+The Todo app is a small app that to create ToDo list of tasks. The project was basically refactor JavaScript code into OOP JavaScript.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+In the app you can create tasks, delete tasks, mark tasks as completed, add date (optional).
 
 ## Technology
 
