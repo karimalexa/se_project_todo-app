@@ -70,6 +70,11 @@
   cursor: pointer;
 }
 
+.todo__delete-btn::hoover {
+  color: #f44;
+  opacity: 0.5;
+}
+
 .todo__delete-btn::before {
   content: "Delete";
 }

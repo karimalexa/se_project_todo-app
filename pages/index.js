@@ -24,17 +24,11 @@ const generateTodo = (data) => {
   const todoElement = todo.getView();
 
   return todoElement;
+};
 
-  //todoNameEl.textContent = data.name;
-  //todoCheckboxEl.checked = data.completed;
-
-  // Apply id and for attributes.
-  // The id will initially be undefined for new todos.
-
-  // If a due date has been set, parsing this it with `new Date` will return a
-  // number. If so, we display a string version of the due date in the todo.
-  //
-  //}
+const renderTodo = (data) => {
+  const todo = generateTodo(data);
+  todosList.append(todo);
 };
 
 addTodoButton.addEventListener("click", () => {
@@ -56,14 +50,13 @@ addTodoForm.addEventListener("submit", (evt) => {
 
   const id = uuidv4();
   const values = { name, date, id };
-  const todo = generateTodo(values);
-  todosList.append(todo);
+  renderTodo(values);
   closeModal(addTodoPopup);
+  newTodoValidator.resetValidation();
 });
 
 initialTodos.forEach((item) => {
-  const todo = generateTodo(item);
-  todosList.append(todo);
+  renderTodo(item);
 });
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
